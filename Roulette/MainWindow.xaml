@@ -1,0 +1,219 @@
+﻿<Window x:Class="Roulette.MainWindow"
+        x:Name="RouletteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="336" Width="1000"
+        MinWidth="1000"
+        MinHeight="450"
+        Background="Black">
+    <Grid x:Name="Roulette" Margin="150,105,210,97">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="122*"/>
+            <RowDefinition Height="57*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Background="{Binding SpecialBoxesVM.SpecialBoxes[1st Column].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[1st Column].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                <Grid>
+                    <TextBlock Text="2to1" FontSize="15" TextAlignment="Center" Foreground="{Binding SpecialBoxesVM.SpecialBoxes[1st Column].ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                        <TextBlock.RenderTransform>
+                            <RotateTransform Angle="270"/>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                </Grid>
+            </Border>
+            <Border Grid.Row="1" Background="{Binding SpecialBoxesVM.SpecialBoxes[2nd Column].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[2nd Column].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                <Grid>
+                    <TextBlock Text="2to1" FontSize="15" TextAlignment="Center" Foreground="{Binding SpecialBoxesVM.SpecialBoxes[2nd Column].ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                        <TextBlock.RenderTransform>
+                            <RotateTransform Angle="270"/>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                </Grid>
+            </Border>
+            <Border Grid.Row="2" Background="{Binding SpecialBoxesVM.SpecialBoxes[3rd Column].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[3rd Column].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                <Grid>
+                    <TextBlock Text="2to1" FontSize="15" TextAlignment="Center" Foreground="{Binding SpecialBoxesVM.SpecialBoxes[3rd Column].ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                        <TextBlock.RenderTransform>
+                            <RotateTransform Angle="270"/>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Margin="85,10,50,-70" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Background="{Binding SpecialBoxesVM.SpecialBoxes[1st 12].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[1st 12].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                <Grid>
+                    <TextBlock Text="{Binding SpecialBoxesVM.SpecialBoxes[1st 12].Name}" FontSize="15" TextAlignment="Center" Foreground="{Binding SpecialBoxesVM.SpecialBoxes[1st 12].ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    </TextBlock>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Background="{Binding SpecialBoxesVM.SpecialBoxes[1 to 18].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[1 to 18].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                    <Grid>
+                        <TextBlock Text="{Binding SpecialBoxesVM.SpecialBoxes[1 to 18].Name}" FontSize="15" TextAlignment="Center" Foreground="{Binding SpecialBoxesVM.SpecialBoxes[1 to 18].ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                        </TextBlock>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" Background="{Binding SpecialBoxesVM.SpecialBoxes[Even].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[Even].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                    <Grid>
+                        <TextBlock Text="{Binding SpecialBoxesVM.SpecialBoxes[Even].Name}" FontSize="15" TextAlignment="Center" Foreground="{Binding SpecialBoxesVM.SpecialBoxes[Even].ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                        </TextBlock>
+                    </Grid>
+                </Border>
+            </Grid>
+            <Border Grid.Row="0" Grid.Column="1" Background="{Binding SpecialBoxesVM.SpecialBoxes[2nd 12].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[2nd 12].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                <Grid>
+                    <TextBlock Text="{Binding SpecialBoxesVM.SpecialBoxes[2nd 12].Name}" FontSize="15" TextAlignment="Center" Foreground="{Binding SpecialBoxesVM.SpecialBoxes[2nd 12].ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    </TextBlock>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Background="{Binding SpecialBoxesVM.SpecialBoxes[NamelessBlack].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[NamelessBlack].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                </Border>
+                <Border Grid.Column="1" Background="{Binding SpecialBoxesVM.SpecialBoxes[NamelessRed].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[NamelessRed].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                </Border>
+            </Grid>
+            <Border Grid.Row="0" Grid.Column="2" Background="{Binding SpecialBoxesVM.SpecialBoxes[3rd 12].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[3rd 12].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                <Grid>
+                    <TextBlock Text="{Binding SpecialBoxesVM.SpecialBoxes[3rd 12].Name}" FontSize="15" TextAlignment="Center" Foreground="{Binding SpecialBoxesVM.SpecialBoxes[3rd 12].ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    </TextBlock>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="1" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Background="{Binding SpecialBoxesVM.SpecialBoxes[Odd].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[Odd].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                    <Grid>
+                        <TextBlock Text="{Binding SpecialBoxesVM.SpecialBoxes[Odd].Name}" FontSize="15" TextAlignment="Center" Foreground="{Binding SpecialBoxesVM.SpecialBoxes[Odd].ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                        </TextBlock>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" Background="{Binding SpecialBoxesVM.SpecialBoxes[19 to 36].BackgroundColor}" BorderBrush="{Binding SpecialBoxesVM.SpecialBoxes[19 to 36].BorderColor}" BorderThickness="2" Margin="3" CornerRadius="3" >
+                    <Grid>
+                        <TextBlock Text="{Binding SpecialBoxesVM.SpecialBoxes[19 to 36].Name}" FontSize="15" TextAlignment="Center" Foreground="{Binding SpecialBoxesVM.SpecialBoxes[19 to 36].ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                        </TextBlock>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+        <ItemsControl Name="StandardBoxesGridIC" Margin="10,0,10,0">
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="Grid.Column" Value="{Binding ColumnNumber}"/>
+                    <Setter Property="Grid.Row" Value="{Binding RowNumber}"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Number}" Value="0">
+                            <Setter Property="Grid.RowSpan" Value="3"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="75" />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="{Binding BackgroundColor}" BorderBrush="{Binding BorderColor}" BorderThickness="2" Margin="3">
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="3"/>
+                                <Style.Triggers >
+                                    <DataTrigger Binding="{Binding Number}" Value="0">
+                                        <Setter Property="CornerRadius" Value="40,3,3,40"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        <Grid>
+                            <TextBlock Text="{Binding Number}" FontSize="20" Foreground="{Binding ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Grid Grid.Column="1" Grid.Row="1" >
+            <Popup Name="Popup" IsOpen="{Binding PopupVM.IsVisible}"  PlacementTarget="{Binding RelativeSource={RelativeSource TemplatedParent}}" VerticalOffset="-45">
+                <Border  BorderThickness="2" BorderBrush="White">
+                    <Grid Background="AliceBlue" Width="80">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" Background="{Binding PopupVM.BackgroundColor}" BorderBrush="White" BorderThickness="2">
+                            <Grid>
+                                <TextBlock Text="{Binding PopupVM.WinningNumber}" FontSize="15" TextAlignment="Center" Foreground="{Binding PopupVM.ForegroundColor}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                </TextBlock>
+                            </Grid>
+                        </Border>
+                        <ItemsControl Grid.Row="1" ItemsSource="{Binding PopupVM.WinningPositions}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Vertical" ItemWidth="100" HorizontalAlignment="Center"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}" Margin="0.5" TextAlignment="Center"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
+                </Border>
+            </Popup>
+        </Grid>
+    </Grid>
+</Window>
